@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="ja">
   <head>
@@ -6,9 +7,9 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.79.0">
-    <title>価格表示テンプレート for Bootstrap · Bootstrap v5.0</title>
+    <title>ポートフォリオ for Bootstrap · Bootstrap v5.0</title>
 
-    <link rel="canonical" href="https://getbootstrap.jp/docs/5.0/examples/pricing/">
+    <link rel="canonical" href="https://getbootstrap.jp/docs/5.0/examples/carousel/">
 
     
 
@@ -43,117 +44,182 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="pricing.css" rel="stylesheet">
+    <link href="carousel.css" rel="stylesheet">
   </head>
   <body>
     
-<header class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-  <p class="h5 my-0 me-md-auto fw-normal">会社名</p>
-  <nav class="my-2 my-md-0 me-md-3">
-    <a class="p-2 text-dark" href="#">特徴</a>
-    <a class="p-2 text-dark" href="#">エンタープライズ</a>
-    <a class="p-2 text-dark" href="#">サポート</a>
-    <a class="p-2 text-dark" href="#">価格</a>
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">カルーセル</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="#">ホーム</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">リンク</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">無効ボタン</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="検索" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
   </nav>
-  <a class="btn btn-outline-primary" href="#">サインアップ</a>
 </header>
 
-<main class="container">
-  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-4">価格</h1>
-    <p class="lead">この Bootstrap テンプレートを使ってまだ見ぬ顧客への効果的な価格テーブルを素早く構築しましょう. これは Bootstrap のコンポーネントとユーティリティを少しカスタマイズして構築されています.</p>
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+      <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>見出しの例</h1>
+            <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">今すぐサインアップ</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>別の見出しの例</h1>
+            <p>吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">もっとみる</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>もう一つの見出しの例</h1>
+            <p>しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。</p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">ギャラリーをみる</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">前へ</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">次へ</span>
+    </a>
   </div>
 
-  <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-    <div class="col">
-      <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 fw-normal">フリー</h4>
-      </div>
-      <div class="card-body">
-        <h1 class="card-title pricing-card-title">￥0 <small class="text-muted">/ 月</small></h1>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>10 ユーザー</li>
-          <li>2 GB のストレージ</li>
-          <li>メールによるサポート</li>
-          <li>ヘルプセンターへのアクセス</li>
-        </ul>
-        <button type="button" class="w-100 btn btn-lg btn-outline-primary">無料でサインアップ</button>
-      </div>
-    </div>
-    </div>
-    <div class="col">
-      <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 fw-normal">プロフェッショナル</h4>
-      </div>
-      <div class="card-body">
-        <h1 class="card-title pricing-card-title">￥1500 <small class="text-muted">/ 月</small></h1>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>20 ユーザー</li>
-          <li>10 GB のストレージ</li>
-          <li>メールによる優先的なサポート</li>
-          <li>ヘルプセンターへのアクセス</li>
-        </ul>
-        <button type="button" class="w-100 btn btn-lg btn-primary">はじめる</button>
-      </div>
-    </div>
-    </div>
-    <div class="col">
-      <div class="card mb-4 shadow-sm">
-      <div class="card-header">
-        <h4 class="my-0 fw-normal">エンタープライズ</h4>
-      </div>
-      <div class="card-body">
-        <h1 class="card-title pricing-card-title">￥2900 <small class="text-muted">/ 月</small></h1>
-        <ul class="list-unstyled mt-3 mb-4">
-          <li>30 ユーザー</li>
-          <li>15 GB のストレージ</li>
-          <li>メールと電話によるサポート</li>
-          <li>ヘルプセンターへのアクセス</li>
-        </ul>
-        <button type="button" class="w-100 btn btn-lg btn-primary">詳細を聞く</button>
-      </div>
-    </div>
-    </div>
-  </div>
 
-  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
     <div class="row">
-      <div class="col-6 col-md">
-        <h5>特徴</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary" href="#">クールなスタッフ</a></li>
-          <li><a class="link-secondary" href="#">その他の特徴</a></li>
-          <li><a class="link-secondary" href="#">チームの特徴</a></li>
-          <li><a class="link-secondary" href="#">開発者向け</a></li>
-          <li><a class="link-secondary" href="#">そのほか</a></li>
-          <li><a class="link-secondary" href="#">最後</a></li>
-        </ul>
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+        <h2>見出し</h2>
+        <p>掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</p>
+        <p><a class="btn btn-secondary" href="#" role="button">詳しく見る &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+        <h2>見出し</h2>
+        <p>その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。</p>
+        <p><a class="btn btn-secondary" href="#" role="button">詳しく見る &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
+
+        <h2>見出し</h2>
+        <p>吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+        <p><a class="btn btn-secondary" href="#" role="button">詳しく見る &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">作りかけのヘッダ。<span class="text-muted">あなたの心を圧倒する。</span></h2>
+        <p class="lead">掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。</p>
       </div>
-      <div class="col-6 col-md">
-        <h5>リソース</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary" href="#">リソース</a></li>
-          <li><a class="link-secondary" href="#">リソース名</a></li>
-          <li><a class="link-secondary" href="#">そのほかのリソース</a></li>
-          <li><a class="link-secondary" href="#">最後のリソース</a></li>
-        </ul>
-      </div>
-      <div class="col-6 col-md">
-        <h5>このサービスについて</h5>
-        <ul class="list-unstyled text-small">
-          <li><a class="link-secondary" href="#">チーム</a></li>
-          <li><a class="link-secondary" href="#">場所</a></li>
-          <li><a class="link-secondary" href="#">プライバシー</a></li>
-          <li><a class="link-secondary" href="#">利用規約</a></li>
-        </ul>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
       </div>
     </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">そう、それでいい。<span class="text-muted">自分を見つめよ。</span></h2>
+        <p class="lead">その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。そうしてその穴の中から時々ぷうぷうと煙を吹く。</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">最後にこれで、<span class="text-muted">チェックメイト。</span></h2>
+        <p class="lead">吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。</p>
+      </div>
+      <div class="col-md-5">
+        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+
+  <!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">トップに戻る</a></p>
+    <p>&copy; 2017-2021 Company, Inc. &middot; <a href="#">プライバシー</a> &middot; <a href="#">利用規約</a></p>
   </footer>
 </main>
 
 
-    
+    <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+      
   </body>
 </html>
